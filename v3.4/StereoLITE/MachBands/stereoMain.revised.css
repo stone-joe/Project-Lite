@@ -1,0 +1,232 @@
+@charset "utf-8";
+/* CSS Document */
+/* iphone safari dimensions: 475 x 270 px */
+/*-----------------Animations--------------------*/
+body {
+	background-color:#fff;
+	overflow-x:hidden;
+	-webkit-user-select:none;
+	-webkit-touch-callout:none;
+	position:static;
+}
+#loading_sign, #home, #program {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:99%;
+	z-index:5;
+}
+#loading_background {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	opacity:0.45;
+	z-index:6;
+}
+#loading_text {
+	color:#fff;
+	width:100%;
+	position:absolute;
+	text-align:center;
+	font-size:200%;
+	top:34%;
+	left:0px;
+	z-index:7;
+}
+#home {
+	z-index:2;
+	background-color:#fff;
+}
+#header {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	text-align:center;
+}
+/* Frames */
+.frame {
+	position:absolute;
+	width:46%;
+	height:100%;
+}
+#instructions {
+	position:absolute;	
+	width:95%;
+	top:7em;
+	margin-left:2.5%;
+	left:0px;
+}
+p {
+	position:absolute;
+	left:0px;
+	width:95%;
+	margin-left:2.5%;
+	text-align:justify;
+}
+#home {
+	z-index:2;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#app {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:2;
+	background-color:#000;
+	display:none;
+}
+/* Frames!!! */
+#left_frame, #right_frame {
+	position        :absolute;
+	top             :0;
+	left            :0;
+	width           :100%;
+	height          :100%;
+	z-index         :3;
+}
+[name="line_width"] {
+	position:absolute;
+	top:90%;
+	left:30%;
+}
+[name="frame"]{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#000;
+	width:47.5%;
+	height:100%;
+	z-index:4;
+}
+[name="info"] {
+	position:absolute;
+	width:100%;
+	color:#fff;
+	font-size:130%;
+	z-index:3;
+	height:100%;
+	text-shadow:1px 1px #000;
+}
+.green_normal {
+	position:absolute;
+	bottom:5%;	
+}
+.green_opposite {
+	position:absolute;
+	top:0;
+}
+.red_normal {
+	position:absolute;
+	top:0;
+}
+.red_opposite {
+	position:absolute;
+	bottom:5%;
+}
+[name="menu_button"] {
+	position:absolute;
+	left:30%;
+	width:40%;
+	top:70%;
+}
+/* Menu */
+[name="menu"] {
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0.45;
+	z-index:4;
+	display:none;
+}
+[name="menu_list"] {
+	position:absolute;
+	margin:0px;
+	list-style:none;
+	padding:0px;
+	z-index:5;
+	width:100%;
+	display:none;
+}
+[name="menu_list"]>li, [name="menu_button"] {
+	padding-top:4%;
+	padding-bottom:4%;
+	margin-top:2%;
+	margin-bottom:2%;
+	text-align:center;
+	border-radius:0.5em;
+	background-color:#FEF6EA;
+	font-size:150%;
+	z-index:6;
+}
+[name="crosshair"] {
+	position:relative;	
+	width   :10px;
+	height  :10px;
+	z-index :10;
+	left    :0;
+	margin  :0;
+	padding :0;
+}
+.bar {
+	position:absolute;
+	height:33.3%;
+	width:100%;
+	left:0;
+	top:0;
+	margin  :0;
+	padding :0;
+}
+#light_right {
+	background-color:rgb(193,193,193);	
+}
+#dark_right {
+	background-color:rgb(61,61,61);	
+	top:66.5%;
+}
+#light_left {
+	background-color:rgb(193,193,193);	
+	top:66.5%;
+}
+#dark_left {
+	background-color:rgb(61,61,61);	
+}
+#gradient_right {
+	top:33.3%;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(rgb(193,193,193)), to(rgb(61,61,61)));
+}
+#gradient_left {
+	top:33.3%;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(rgb(61,61,61)), to(rgb(193,193,193)));
+}
+[name='gradient_width'] {
+	position:absolute;
+	color:#fff;
+	width:100%;
+}
+#gradient_left_info {
+	-webkit-transform:rotateZ(270deg);
+	-moz-transform:rotateZ(270deg);
+	-o-transform:rotateZ(270deg);
+	-ms-transform:rotateZ(270deg);
+	transform:rotateZ(270deg);
+	left:-46%;
+	top:35%;
+}
+#gradient_right_info {
+	-webkit-transform:rotateZ(90deg);
+	-moz-transform:rotateZ(90deg);
+	-o-transform:rotateZ(90deg);
+	-ms-transform:rotateZ(90deg);
+	transform:rotateZ(90deg);
+	right:-46%;
+	top:55%;
+}

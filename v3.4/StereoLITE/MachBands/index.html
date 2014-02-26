@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"> 
+		<meta name="description" content="ProjectLite's Green Vs Red Binocular rivalry iPhone web application! This web application tests whether or not the human brain can form the color yellow when one eye is fed a red color and the other eye is fed green! The my3D viewer is required."> 
+		<meta name="keywords" content="ProjectLite, Boston University, Green vs Red, binocular rivalry, iPhone, iTouch, web, application, my3D"> 
+		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta names="apple-mobile-web-app-status-bar-style" content="black">		
+		<link rel="apple-touch-icon" href="./Resources/favicon.jpg" type="image/x-icon"> 
+		<link rel="icon" href="./Resources/favicon.jpg" type="image/x-icon"> 
+		<link rel="shortcut icon" href="./Resources/favicon.jpg" type="image/x-icon"> 
+		<link rel="stylesheet" href="stereoMain.revised.css" type="text/css"></link> 
+		<script type="text/javascript">
+			<!--
+				window.onerror = function(msg,url,line){
+					alert([msg,url,line]);	
+				}
+			//-->
+		</script>
+		<script type="text/javascript" src="../../../../include/sources/jquery.min.js"></script>
+		<script type="text/javascript" src="stereoMain.revised.js"></script>
+		<title>Mach Bands</title> 
+	</head> 
+	<body onselectstart="event.preventDefault();" onload="setUp();setUp=undefined;" onorientationchange="windowChange(event)">
+		<div id="home">
+			<div id="header">
+				<img src="../../../../include/images/title_big.gif" onload="" ontouchstart="backButton = true" ontouchmove="backButton = false" ontouchend="backButton ? window.location='../../' : null" /><br /> 
+				<img src="../../../../include/images/new_subtitle.gif" ontouchstart="backButton = true" ontouchmove="backButton = false" ontouchend="backButton ? window.location='../../' : null" />
+			</div>
+			<div id="instructions">
+				<p style="text-align:center;font-size:125%;"><b>Mach Bands</b></p>
+				<p style="position:absolute;top:5em;">
+					<br />
+					Project LITE is supported in part by U.S.
+					NSF Grant # DUE-071595.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- 		<DIV> containing the elements for the main application.		-->
+	<div id="app">
+		<div name="frame">
+			<div id="left_frame">
+				<!-- 		Elements that make the actual gradient bars		-->
+				<div id="light_left" class="bar" orig-id="light_left"></div>
+				<div id="gradient_left" class="bar" orig-id="gradient_left"></div>
+				<div id="dark_left" class="bar" orig-id="dark_left"></div>
+				<!-- 		Fixation Cross 		-->
+				<img src="../../../include/images/crosshair.png" name="crosshair" />
+			</div>
+			
+			<!-- 		Information about the brightness of the gradients and width of the gradient		-->			
+			<div name="info">
+				<span name="red_info" class="red_normal" orig-class="red_info">61</span>
+				<span name="green_info" class="green_normal" orig-class="green_info">194</span>	
+				<span name="gradient_width" id="gradient_left_info" orig-id="gradient_left_info">Gradient Width: </span>
+			</div>
+			
+			<!-- 		Menu button		-->
+			<span name="menu_button" ontouchmove="this.touchmove=true;">Menu</span>
+			
+			<!-- 		Actual Menu		-->
+			<div name="menu"></div>
+			<ul name="menu_list">
+				<li name="home_button" ontouchstart="lightUp('home_button',1);" ontouchmove="this.touchmove=true;">Home</li>
+				<li name="copy_left_button" ontouchstart="lightUp('copy_left_button',1);" ontouchmove="this.touchmove=true;">Copy Left</li>
+				<li name="copy_right_button" ontouchstart="lightUp('copy_right_button',1);" ontouchmove="this.touchmove=true;">Copy Right</li>
+				<li name="reset_button" ontouchstart="lightUp('reset_button',1);" ontouchmove="this.touchmove=true;">Reset</li>
+				<li name="crosshair_button" ontouchstart="lightUp('crosshair_button',1);" ontouchmove="this.touchmove=true;">Hide Crosshairs</li>
+				<li style="display:none" name="fullscreen_button" ontouchstart="lightUp(this.name,1);" ontouchmove="this.touchmove=true;">Full Screen</li>
+				<li style="display:none" name="smallscreen_button" ontouchstart="lightUp(this.name,1);" ontouchmove="this.touchmove=true;">Small Screen</li>
+				<li name="close" ontouchstart="lightUp(this.name,1);" ontouchmove="this.touchmove=true;">Close</li>
+			</ul>
+		</div>
+		
+		<!-- 		Right Frame which is identical to the left frame but on the right half of the screen		-->
+		<div name="frame" style="left:53%;">			
+			<div id="right_frame">
+				<div id="light_right" class="bar" orig-id="light_right"></div>
+				<div id="gradient_right" class="bar" orig-id="gradient_right"></div>
+				<div id="dark_right" class="bar" orig-id="dark_right"></div>
+				<!-- 		Fixation Cross 		-->
+				<img src="../../../include/images/crosshair.png" name="crosshair" />
+			</div>
+			<div name="info">
+				<span name="red_info" class="red_opposite" orig-class="red_opposite">61</span>
+				<span name="green_info" class="green_opposite" orig-class="green_opposite">194</span>
+				<span name="gradient_width" id="gradient_right_info" orig-id="gradient_right_info">Gradient Width: </span>
+			</div>
+			<span name="menu_button" ontouchmove="this.touchmove=true;">Menu</span>
+			<div name="menu"></div>
+			<ul name="menu_list">
+				<li name="home_button" ontouchstart="lightUp('home_button',1);" ontouchmove="this.touchmove=true;">Home</li>
+				<li name="copy_left_button" ontouchstart="lightUp('copy_left_button',1);" ontouchmove="this.touchmove=true;">Copy Left</li>
+				<li name="copy_right_button" ontouchstart="lightUp('copy_right_button',1);" ontouchmove="this.touchmove=true;">Copy Right</li>
+				<li name="reset_button" ontouchstart="lightUp('reset_button',1);" ontouchmove="this.touchmove=true;">Reset</li>
+				<li name="crosshair_button" ontouchstart="lightUp('crosshair_button',1);" ontouchmove="this.touchmove=true;">Hide Crosshairs</li>
+				<li style="display:none" name="fullscreen_button" ontouchstart="lightUp(this.name,1);" ontouchmove="this.touchmove=true;">Full Screen</li>
+				<li style="display:none" name="smallscreen_button" ontouchstart="lightUp(this.name,1);" ontouchmove="this.touchmove=true;">Small Screen</li>
+				<li name="close" ontouchstart="lightUp(this.name,1);" ontouchmove="this.touchmove=true;">Close</li>
+			</ul>
+		</div>
+	</div>
+	</body> 
+</html> 
