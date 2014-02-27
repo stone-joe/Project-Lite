@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"> 
+		<meta name="description" content="ProjectLite's Green Vs Red Binocular rivalry iPhone web application! This web application tests whether or not the human brain can form the color yellow when one eye is fed a red color and the other eye is fed green! The my3D viewer is required."> 
+		<meta name="keywords" content="ProjectLite, Boston University, Green vs Red, binocular rivalry, iPhone, iTouch, web, application, my3D"> 
+		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta names="apple-mobile-web-app-status-bar-style" content="black">		
+		<link rel="apple-touch-icon" href="./Resources/favicon.jpg" type="image/x-icon"> 
+		<link rel="icon" href="./Resources/favicon.jpg" type="image/x-icon"> 
+		<link rel="shortcut icon" href="./Resources/favicon.jpg" type="image/x-icon"> 
+		<link rel="stylesheet" href="refcolormixing.css" type="text/css"></link>
+		<script type="text/javascript">
+			<!--
+				window.onerror = function(msg,url,line){
+					alert([msg,url,line]);	
+				}
+			//-->
+		</script>
+		<script type="text/javascript" src="../../../../include/sources/jquery1.11.0.min.js"></script>
+		<script type="text/javascript" src="../../../../include/sources/hammer.js"></script>
+		<script type="text/javascript" src="../../../../include/sources/Lite.js"></script>
+		<script type="text/javascript" src="refcolormixing.js"></script>
+		<title>Spectral Line</title> 
+	</head> 
+	<body onselectstart="event.preventDefault();">
+		<div id="introduction">
+			<div class="header">
+				<img src="../../../include/images/title_big.gif" onload="lite.loadBanner(this)" ontouchstart="backButton = true" ontouchmove="backButton = false" ontouchend="backButton ? window.location='../../' : null" /> 
+				<br/>
+				<img src="../../../include/images/new_subtitle.gif" onload="lite.loadBanner(this)" ontouchstart="backButton = true" ontouchmove="backButton = false" ontouchend="backButton ? window.location='../../' : null" />
+			</div>
+			<h3 id="title">Smartphone Color Spectra</h3>
+			<p id="description">
+				This application shows the spectra for colors blue, red, and green. The default spectra shown is for red. To  change the colors,
+				tap the screen once making three color boxes appear. Tap a box to see that color's spectrum.<br/>
+				Project LITE is supported in part by U.S. NSF Grant # DUE-071595.
+			</p>
+		</div>
+		<div id="app">
+       			<img src="../../../include/images/colorspectra/BlueSpectrum.jpg" id="blue_spectrum" class="spectra" />
+			<img src="../../../include/images/colorspectra/GreenSpectrum.jpg" id="green_spectrum" class="spectra" />
+			<img src="../../../include/images/colorspectra/RedSpectrum.jpg" id="red_spectrum" class="spectra" />
+			<ul id="three_colors">
+				<li id="blue" color="#00f"></li>
+				<li id="green" color="#0f0" default-color="#0f0"></li>
+				<li id="red" color="#f00" default-color="#f00"></li>			
+			</ul>
+		</div>
+	</body> 
+</html> 
