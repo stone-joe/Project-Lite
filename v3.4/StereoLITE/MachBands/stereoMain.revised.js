@@ -15,8 +15,8 @@ var copy			= "";
 var crossOffset		= 2;
 
 // Gradient Variables
-var dark		 		 = 61;
-var light		 		 = 194;
+var dark		 	 = 61;
+var light		         = 194;
 var defaultDark	 		 = 61;
 var defaultLight 		 = 194;
 var defaultGradientHeight= 0;
@@ -103,8 +103,8 @@ function adjustLeft(coord,dx,dy){
 		});
 		if ( copy == "left" ){
 			$(".green_opposite").html(dark.toFixed(0));
-			$("#dark_right").css("background-color","#"+rgbToHex("("+light+","+light+","+light+")"));
-			$("#light_right").css("background-color","#"+rgbToHex("("+dark+","+dark+","+dark+")"));
+			$("#dark_right").css("background-color",$("#light_left").css("background-color"));
+			$("#light_right").css("background-color",$("#dark_left").css("background-color")); 
 			$("#gradient_right").css({
 				"background":"-webkit-linear-gradient(rgb("+dark+","+dark+","+dark+"),rgb("+light+","+light+","+light+"))",
 			});
@@ -131,8 +131,8 @@ function adjustLeft(coord,dx,dy){
 		});
 		if ( copy == "left" ){
 			$(".red_opposite").html(light.toFixed(0));
-			$("#light_right").css("background-color","rgb("+dark+","+dark+","+dark+")");
-			$("#dark_right").css("background-color","rgb("+light+","+light+","+light+")");
+			$("#light_right").css("background-color",$("#dark_left").css("background-color"));
+		        $("#dark_right").css("background-color",$("#light_left").css("background-color"));
 			$("#gradient_right").css({
 				"background":"-webkit-linear-gradient(rgb("+dark+","+dark+","+dark+"),rgb("+light+","+light+","+light+"))",
 			});	
@@ -162,7 +162,8 @@ function adjustRight(coord,dx,dy){
 		});								
 		if ( copy == "right" ){
 			$(".red_normal").html(light.toFixed(0));
-			$("#dark_left").css("background-color","rgb("+light+","+light+","+light+")");
+			$("#dark_left").css("background-color",$("#light_right").css("background-color"));
+			$("#light_left").css("background-color",$("#dark_right").css("background-color"));
 			$("#gradient_left").css({
 				"background":"-webkit-linear-gradient(rgb("+light+","+light+","+light+"),rgb("+dark+","+dark+","+dark+"))",
 			});
@@ -189,7 +190,8 @@ function adjustRight(coord,dx,dy){
 		});								
 		if ( copy == "right" ){
 			$(".green_normal").html(dark.toFixed(0));
-			$("#light_left").css("background-color","rgb("+dark+","+dark+","+dark+")");
+			$("#light_left").css("background-color",$("#dark_right").css("background-color"));
+		        $("#dark_left").css("background-color",$("#light_right").css("background-color"));
 			$("#gradient_left").css({
 				"background":"-webkit-linear-gradient(rgb("+light+","+light+","+light+"),rgb("+dark+","+dark+","+dark+"))",
 			});
@@ -261,18 +263,22 @@ function setUp(){
 	$("[name='copy_left_button']").on({"mouseup touchend":function(e){
 		popEventBubble(e);
 		lightUp('copy_left_button',0);		
-		copy = "left";
-		adjustLeft({pageY:$(window).width()/2+5},0,0);
-		adjustLeft({pageY:$(window).width()/2-5},0,0);
+	        if ( copy == "" ){
+		    copy = "left";
+		    adjustLeft({pageY:$(window).width()/2+5},0,0);
+		    adjustLeft({pageY:$(window).width()/2-5},0,0);
+		}
 		closeMenu(e);
 		return;
 	}});
 	$("[name='copy_right_button']").on({"mouseup touchend":function(e){
 		popEventBubble(e);
 		lightUp('copy_right_button',0);
-		copy = "right";
-		adjustRight({pageY:$(window).width()/2+5},0,0);
-		adjustRight({pageY:$(window).width()/2-5},0,0);
+	        if ( copy == "" ){
+		    copy = "right";
+		    adjustRight({pageY:$(window).width()/2+5},0,0);
+		    adjustRight({pageY:$(window).width()/2-5},0,0);
+		}
 		closeMenu(e);
 		return;
 	}});	
