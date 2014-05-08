@@ -8,7 +8,7 @@ Division of Undergraduate Education.
 
 For more information, go to the main LITE site at:
 
-<div style="text-align:center">
+<div style="text-align:center;">
      <a href="http://lite.bu.edu">lite.bu.edu</a>
 </div>
 
@@ -18,7 +18,7 @@ These programs are mobile web applications that are designed to work on
 the most popular smart-phone browsers (iOS and Android). The latest
 version of the applications can be found at:
 
-<div id="text-align:center">
+<div id="text-align:center;">
      <a href="http://lite5.bu.edu">lite5.bu.edu</a>
 </div>
 
