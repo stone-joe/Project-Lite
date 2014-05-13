@@ -19,7 +19,7 @@ the most popular smart-phone browsers (iOS and Android). The latest
 version of the applications can be found at:
 
 <div id="text-align:center;">
-     <a href="http://lite5.bu.edu">lite5.bu.edu</a>
+     <a href="http://lite5.bu.edu/v3.4/">lite5.bu.edu/v3.4</a>
 </div>
 
 Most of the applications do not work on desktop/laptop browsers. Support
@@ -27,4 +27,4 @@ for these browsers will be implemented soon.
 
 <h2>License</h2>
 
-The NSF recommends that all software developed through its programs should be open-source (https://www.nsf.gov/cise/aci/taskforces/TaskForceReport_Software.pdf). Thus, this software will fall under the guidelines of the MIT license.
+The NSF recommends that all software developed through its programs should be open-source (<a href='https://www.nsf.gov/cise/aci/taskforces/TaskForceReport_Software.pdf'>TaskForceReport_Software.pdf</a>). Thus, this software will fall under the guidelines of the MIT license.
