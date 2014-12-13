@@ -19,7 +19,7 @@ the most popular smart-phone browsers (iOS and Android). The latest
 version of the applications can be found at:
 
 <div id="text-align:center;">
-     <a href="http://lite5.bu.edu/v3.4/">lite5.bu.edu/v3.4</a>
+     <a href="http://lite5.bu.edu/v4.1/">lite5.bu.edu/v4.1</a>
 </div>
 
 Most of the applications do not work on desktop/laptop browsers. Support
